@@ -3,111 +3,44 @@
   --bg: #0b0b0b;
   --text: #eaeaea;
   --muted: #b9b9b9;
-  --card: #131313;
+  --card: #141414;
   --accent: #8B0000;
   --accent-2: #b21a1a;
   --maxw: 1120px;
   --radius: 16px;
   --shadow: 0 8px 24px rgba(0,0,0,.35);
 }
-
-* { box-sizing: border-box; }
-html, body { padding:0; margin:0; }
-body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
-
-a { color: var(--accent-2); text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-.container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
-
-/* Header / Nav */
-.navbar {
-  position: sticky; top: 0; z-index: 50;
-  backdrop-filter: saturate(180%) blur(6px);
-  background: rgba(10,10,10,.7);
-  border-bottom: 1px solid rgba(255,255,255,.06);
-}
-.navbar-inner { display:flex; align-items:center; justify-content:space-between; padding: 14px 0; }
-.brand { font-weight: 800; letter-spacing: .5px; }
-.nav-links a { margin-left: 18px; font-weight: 600; color: var(--text); opacity:.85; }
-.nav-links a:hover { opacity:1; }
-
-/* Hero */
-.hero {
-  position: relative;
-  min-height: 72vh;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  overflow: hidden;
-}
-.hero::before {
-  content: "";
-  position: absolute; inset:0;
-  background: radial-gradient(1200px 500px at 50% 30%, rgba(139,0,0,.45), transparent 70%);
-  z-index: 1;
-}
-.hero img.bg {
-  position:absolute; inset:0; width:100%; height:100%; object-fit: cover; filter: brightness(.55) contrast(1.05);
-}
-.hero .content { position:relative; z-index:2; padding: 40px 0; }
-.hero h1 { font-size: clamp(2rem, 4vw, 3.2rem); margin: 0 0 10px; }
-.hero p { max-width: 760px; margin: 0 auto; color: var(--muted); }
-.ctas { margin-top: 22px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
-.button {
-  display:inline-block; padding: 12px 18px; border-radius: 999px; font-weight: 700; letter-spacing:.2px;
-  background: var(--accent); color: #fff; box-shadow: var(--shadow);
-}
-.button.secondary { background: transparent; border:1px solid rgba(255,255,255,.2); color:#fff; }
-
-/* Sections */
-section { padding: 72px 0; }
-section h2 { font-size: clamp(1.6rem, 2.6vw, 2.2rem); margin: 0 0 16px; }
-.lead { color: var(--muted); margin-top: -6px; margin-bottom: 26px; }
-
-.cards {
-  display:grid; gap:18px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-.card {
-  background: var(--card); border: 1px solid rgba(255,255,255,.06);
-  border-radius: var(--radius); overflow:hidden; box-shadow: var(--shadow);
-}
-.card img { width:100%; height: 260px; object-fit: cover; display:block; }
-.card .pad { padding: 16px; }
-
-.embed {
-  background: var(--card); border:1px solid rgba(255,255,255,.06); border-radius: var(--radius);
-  padding: 10px; box-shadow: var(--shadow);
-}
-
-/* Responsive iframe aspect */
-.ratio {
-  position: relative; width: 100%; padding-bottom: 177.78%; /* 9:16 */
-  background: #000; border-radius: 12px; overflow: hidden;
-}
-.ratio > * { position:absolute; inset:0; width:100%; height:100%; }
-
-/* Footer */
-footer {
-  padding: 36px 0; border-top: 1px solid rgba(255,255,255,.08); color: var(--muted);
-  text-align:center;
-}
-
-/* Utilities */
-.tag {
-  display:inline-block; padding: 6px 10px; border-radius: 999px;
-  background: rgba(139,0,0,.15); color: #ffdfdf; border:1px solid rgba(139,0,0,.35);
-  font-weight:600;
-}
-
-form input, form textarea {
-  width:100%; padding:12px 14px; margin:8px 0; border-radius:12px; border:1px solid rgba(255,255,255,.15);
-  background:#0f0f0f; color:#fff;
-}
-form button { margin-top:6px; }
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent-2);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.navbar{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(6px);background:rgba(10,10,10,.7);border-bottom:1px solid rgba(255,255,255,.06)}
+.navbar-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{font-weight:800;letter-spacing:.4px}
+.nav-links a{margin-left:18px;font-weight:600;color:var(--text);opacity:.9}
+.nav-links a:hover{opacity:1}
+.hero{position:relative;min-height:72vh;display:grid;place-items:center;text-align:center;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(1200px 500px at 50% 30%, rgba(139,0,0,.45), transparent 70%);z-index:1}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.55) contrast(1.05)}
+.hero .content{position:relative;z-index:2;padding:40px 0}
+.hero h1{font-size:clamp(2rem,4vw,3.2rem);margin:0 0 10px}
+.hero p{max-width:760px;margin:0 auto;color:var(--muted)}
+.ctas{margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.button{display:inline-block;padding:12px 18px;border-radius:999px;font-weight:700;letter-spacing:.2px;background:var(--accent);color:#fff;box-shadow:var(--shadow)}
+.button.secondary{background:transparent;border:1px solid rgba(255,255,255,.2);color:#fff}
+section{padding:72px 0}
+section h2{font-size:clamp(1.6rem,2.6vw,2.2rem);margin:0 0 16px}
+.lead{color:var(--muted);margin-top:-6px;margin-bottom:26px}
+.cards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.card img{width:100%;height:260px;object-fit:cover;display:block}
+.card .pad{padding:16px}
+.embed{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:10px;box-shadow:var(--shadow)}
+.ratio{position:relative;width:100%;padding-bottom:177.78%;background:#000;border-radius:12px;overflow:hidden}
+.ratio>*{position:absolute;inset:0;width:100%;height:100%}
+footer{padding:36px 0;border-top:1px solid rgba(255,255,255,.08);color:var(--muted);text-align:center}
+.tag{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(139,0,0,.15);color:#ffdfdf;border:1px solid rgba(139,0,0,.35);font-weight:600}
+form input,form textarea{width:100%;padding:12px 14px;margin:8px 0;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:#0f0f0f;color:#fff}
+form button{margin-top:6px}
